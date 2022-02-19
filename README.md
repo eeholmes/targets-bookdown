@@ -4,6 +4,8 @@ This is an attempt to use {targets} with {bookdown} to track the status of chapt
 
 Caching with {bookdown} often crashes it. Maybe this will work better.
 
+Note this is pretty meh as it doesn't keep track of any dependencies within the chapters, just checks if the Rmd changed.
+
 
 ## To run the book
 
