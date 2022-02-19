@@ -13,5 +13,5 @@ Caching with {bookdown} often crashes it. Maybe this will work better.
 ## To add chapters
 
 * The chapters are in the `chapters` folder. Add an Rmd there.
-* Open the `_targets.R` file and add something like target_factory(chap2)` but replace `chap2` with your file name.
+* Open the `_targets.R` file and add something like `target_factory(chap2)` but replace `chap2` with your file name.
 * `chapters/chap3` shows and example where the chapter uses targets markdown to create a chapter specific pipeline. To run, set `chapters/chap3` as the working directory, open `chap3.Rmd` and knit. Then 
