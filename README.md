@@ -2,11 +2,9 @@
 
 I originally used the approach of https://github.com/robitalec/targets-parameterized-bookdown but with that approach **equations will not work**. This renders the chapters to markdown and equations (unless very simple) won't work. But a fairly simple tweak will allow it to work. Basically use `knitr::knit()` instead of `rmarkdown::render()` to create the rendered R Markdown files.
 
-This is an attempt to use {targets} with {bookdown} to track the status of chapter and not re-run chapters each time the book needs to be rebuilt. At the book level, the dependencies are super simple, just checks if the chapter Rmd has changed. But for a specific chapter, you can have a separate {targets} pipeline that might be much more complex. Someone more clever than I could figure out how to have the base book level `_targets` depend on the chapter level `_targets` so if a chapter dependency changed (within say `chapters/chap3/`), the base `_targets.R` would figure that out and re-run `chapters/chap3/chap3.rmd`.
+This is an attempt to use {targets} with {bookdown} to track the status of chapter and not re-render chapters each time the book needs to be rebuilt. At the book level, the dependencies are super simple, just checks if the chapter Rmd has changed. But for a specific chapter, you can have a separate {targets} pipeline that might be much more complex. {targets} [projects](https://books.ropensci.org/targets/projects.html) is probably a better way to go in that situation.
 
-Caching with {bookdown} often crashes it. Maybe this will work better.
-
-Note this is pretty meh as it doesn't keep track of any dependencies within the chapters, just checks if the Rmd changed.
+*Why did I do this?* I have many big bookdown projects and re-building is always a bit of torture. The bookdown caching feature is quite buggy and crashes my R session all the time. Hopefully this works better.
 
 
 ## To run the book
