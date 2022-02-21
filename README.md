@@ -11,7 +11,7 @@ Note this is pretty meh as it doesn't keep track of any dependencies within the 
 
 ## To run the book
 
-* Install the {targets} package and {bookdown}
+* Install the {targets}, {tarchetypes} and {bookdown} packages
 * Type `tar_make()` at the command line.
 * Look in the `_book` folder for the `index.html` file and open that.
 

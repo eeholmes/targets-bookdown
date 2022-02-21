@@ -12,8 +12,8 @@ list(
   target_factory(chap2),
   target_factory(chap3, dir="chapters/chap3"),
   
-  tar_file(index, 'index.Rmd'),
-  tar_file(yaml, '_bookdown.yml'),
+  tarchetypes::tar_file(index, 'index.Rmd'),
+  tarchetypes::tar_file(yaml, '_bookdown.yml'),
   
   tar_target(
     book,
