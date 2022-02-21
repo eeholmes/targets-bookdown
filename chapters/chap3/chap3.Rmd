@@ -9,6 +9,8 @@ output:
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
 ```
 
+# Chapter 3
+
 This chapter shows how you might use Target Markdown to create a target pipeline for a specific chapter. It will create the {target} files in the chapter folder so you'll want a separate folder for the chapter. To work on the chapter, you would set the working directory to the chapter folder. Then you can use the usual {targets} workflow and visualizations. 
 
 The chapter at https://books.ropensci.org/targets/markdown.html walks through it in detail. This R Markdown template is based off what you get using File > New > RMarkdown > Template > Targets Markdown

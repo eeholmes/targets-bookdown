@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 Chapter 3 | Targets + Bookdown</title>
-  <meta name="description" content="4 Chapter 3 | Targets + Bookdown" />
+  <title>4 Chapter 3 | Chapter 3</title>
+  <meta name="description" content="4 Chapter 3 | Chapter 3" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 Chapter 3 | Targets + Bookdown" />
+  <meta property="og:title" content="4 Chapter 3 | Chapter 3" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 Chapter 3 | Targets + Bookdown" />
+  <meta name="twitter:title" content="4 Chapter 3 | Chapter 3" />
   
   
   
@@ -24,14 +24,14 @@
 <meta name="author" content="Eli Holmes" />
 
 
-<meta name="date" content="2022-02-19" />
+<meta name="date" content="2022-02-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="here-is-chapter-2.html"/>
+<link rel="prev" href="chapter-2.html"/>
 
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -137,8 +137,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#to-run-the-book"><i class="fa fa-check"></i><b>1.1</b> To run the book</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#to-add-chapters"><i class="fa fa-check"></i><b>1.2</b> To add chapters</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="here-is-chapter-1.html"><a href="here-is-chapter-1.html"><i class="fa fa-check"></i><b>2</b> Here is chapter 1</a></li>
-<li class="chapter" data-level="3" data-path="here-is-chapter-2.html"><a href="here-is-chapter-2.html"><i class="fa fa-check"></i><b>3</b> Here is chapter 2</a></li>
+<li class="chapter" data-level="2" data-path="chapter-1.html"><a href="chapter-1.html"><i class="fa fa-check"></i><b>2</b> Chapter 1</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="chapter-1.html"><a href="chapter-1.html#new-section"><i class="fa fa-check"></i><b>2.1</b> New section</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="chapter-2.html"><a href="chapter-2.html"><i class="fa fa-check"></i><b>3</b> Chapter 2</a></li>
 <li class="chapter" data-level="4" data-path="chapter-3.html"><a href="chapter-3.html"><i class="fa fa-check"></i><b>4</b> Chapter 3</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="chapter-3.html"><a href="chapter-3.html#how-to-run-this."><i class="fa fa-check"></i><b>4.1</b> How to run this.</a></li>
@@ -158,7 +161,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Targets + Bookdown</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Chapter 3</a>
           </h1>
         </div>
 
@@ -168,49 +171,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="chapter-3" class="section level1" number="4">
 <h1><span class="header-section-number">4</span> Chapter 3</h1>
-<p>This chapter shows how you might use Target Markdown to create a target
-pipeline for a specific chapter. It will create the {target} files in
-the chapter folder so you’ll want a separate folder for the chapter. To
-work on the chapter, you would set the working directory to the chapter
-folder. Then you can use the usual {targets} workflow and
-visualizations.</p>
-<p>The chapter at <a href="https://books.ropensci.org/targets/markdown.html" class="uri">https://books.ropensci.org/targets/markdown.html</a> walks
-through it in detail. This R Markdown template is based off what you get
-using File &gt; New &gt; RMarkdown &gt; Template &gt; Targets Markdown</p>
+<p>This chapter shows how you might use Target Markdown to create a target pipeline for a specific chapter. It will create the {target} files in the chapter folder so you’ll want a separate folder for the chapter. To work on the chapter, you would set the working directory to the chapter folder. Then you can use the usual {targets} workflow and visualizations.</p>
+<p>The chapter at <a href="https://books.ropensci.org/targets/markdown.html" class="uri">https://books.ropensci.org/targets/markdown.html</a> walks through it in detail. This R Markdown template is based off what you get using File &gt; New &gt; RMarkdown &gt; Template &gt; Targets Markdown</p>
 <div id="how-to-run-this." class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> How to run this.</h2>
 <p>Just hit the Knit button.</p>
-<p>What’s it going to do? Basically it will create the target objects in
-<code>_targets</code> and then the markdown text will use those target objects.
-That way you don’t end up re-running lengthy things. How is this
-different from caching? Well you explicitly specify the dependencies of
-your objects. {targets} is smart and will figure out if it needs to
-re-make an object based on whether it or its dependencies changed. Also
-caching crashes {bookdown} constantly.</p>
+<p>What’s it going to do? Basically it will create the target objects in <code>_targets</code> and then the markdown text will use those target objects. That way you don’t end up re-running lengthy things. How is this different from caching? Well you explicitly specify the dependencies of your objects. {targets} is smart and will figure out if it needs to re-make an object based on whether it or its dependencies changed. Also caching crashes {bookdown} constantly.</p>
 </div>
 <div id="packages" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> Packages</h2>
-<p>The example requires several R packages, and <code>targets</code> must be version
-0.5.0.9000 or above.</p>
+<p>The example requires several R packages, and <code>targets</code> must be version 0.5.0.9000 or above.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="chapter-3.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">&quot;biglm&quot;</span>, <span class="st">&quot;dplyr&quot;</span>, <span class="st">&quot;ggplot2&quot;</span>, <span class="st">&quot;readr&quot;</span>, <span class="st">&quot;targets&quot;</span>, <span class="st">&quot;tidyr&quot;</span>))</span></code></pre></div>
 </div>
 <div id="setup" class="section level2" number="4.3">
 <h2><span class="header-section-number">4.3</span> Setup</h2>
-<p>If you are using old versions of <code>targets</code> (&lt;= 0.7.0) and/or <code>knitr</code>
-(&lt;= 1.33), you will need to load the <code>targets</code> package in the R
-Markdown document in order for Target Markdown code chunks to work.</p>
+<p>If you are using old versions of <code>targets</code> (&lt;= 0.7.0) and/or <code>knitr</code> (&lt;= 1.33), you will need to load the <code>targets</code> package in the R Markdown document in order for Target Markdown code chunks to work.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="chapter-3.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(targets)</span></code></pre></div>
-<p>Near the top of the document, you may also wish to remove the
-<code>_targets_r</code> directory previously written by non-interactive runs of the
-report. Otherwise, your pipeline may contain superfluous targets.</p>
+<p>Near the top of the document, you may also wish to remove the <code>_targets_r</code> directory previously written by non-interactive runs of the report. Otherwise, your pipeline may contain superfluous targets.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="chapter-3.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(targets)</span>
 <span id="cb5-2"><a href="chapter-3.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tar_unscript</span>()</span></code></pre></div>
 </div>
 <div id="globals" class="section level2" number="4.4">
 <h2><span class="header-section-number">4.4</span> Globals</h2>
-<p>We first define some global options/functions common to all targets. The
-function below plots a histogram of ozone concentrations, and our
-histogram target will need it.</p>
+<p>We first define some global options/functions common to all targets. The function below plots a histogram of ozone concentrations, and our histogram target will need it.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="chapter-3.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">tidyverse.quiet =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb6-2"><a href="chapter-3.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tar_option_set</span>(<span class="at">packages =</span> <span class="fu">c</span>(<span class="st">&quot;biglm&quot;</span>, <span class="st">&quot;dplyr&quot;</span>, <span class="st">&quot;ggplot2&quot;</span>, <span class="st">&quot;readr&quot;</span>, <span class="st">&quot;tidyr&quot;</span>))</span>
 <span id="cb6-3"><a href="chapter-3.html#cb6-3" aria-hidden="true" tabindex="-1"></a>create_plot <span class="ot">&lt;-</span> <span class="cf">function</span>(data) {</span>
@@ -222,13 +205,8 @@ histogram target will need it.</p>
 </div>
 <div id="targets" class="section level2" number="4.5">
 <h2><span class="header-section-number">4.5</span> Targets</h2>
-<p>This is the important part. Notice that it uses <code>{targets ...}</code> not
-<code>{r ...}</code>. You need to define dependencies (like data) as a target
-object so that {targets} can keep track of whether it needs to update
-objects based on changes to its dependencies.</p>
-<p><em>How will you use these?</em> Not here. This is just defining them. Scroll
-down to see how to use them. Note you don’t have to define all your
-targets in one place. Scroll down to see examples.</p>
+<p>This is the important part. Notice that it uses <code>{targets ...}</code> not <code>{r ...}</code>. You need to define dependencies (like data) as a target object so that {targets} can keep track of whether it needs to update objects based on changes to its dependencies.</p>
+<p><em>How will you use these?</em> Not here. This is just defining them. Scroll down to see how to use them. Note you don’t have to define all your targets in one place. Scroll down to see examples.</p>
 <p>Our first target borrows the <code>airquality</code> dataset built into base R.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="chapter-3.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tar_target</span>(raw_data, airquality)</span>
 <span id="cb7-2"><a href="chapter-3.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Establish _targets.R and _targets_r/targets/raw-data.R.</span></span></code></pre></div>
@@ -238,28 +216,17 @@ targets in one place. Scroll down to see examples.</p>
 <span id="cb8-3"><a href="chapter-3.html#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tar_target</span>(hist, <span class="fu">create_plot</span>(data))</span>
 <span id="cb8-4"><a href="chapter-3.html#cb8-4" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb8-5"><a href="chapter-3.html#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Establish _targets.R and _targets_r/targets/downstream-targets.R.</span></span></code></pre></div>
-<p>Set the <code>tar_simple</code> chunk option to <code>TRUE</code> to define a single target
-with the command in the code chunk. The chunk below only contains
-<code>biglm(Ozone ~ Wind + Temp, data)</code> in the source, but because
-<code>tar_simple</code> is <code>TRUE</code>, it is shorthand for
-<code>tar_target(name = fit, command = biglm(Ozone ~ Wind + Temp, data))</code>.
-All other arguments to <code>tar_target()</code> are set to their default values
-(configurable with <code>tar_option_set()</code>).</p>
+<p>Set the <code>tar_simple</code> chunk option to <code>TRUE</code> to define a single target with the command in the code chunk. The chunk below only contains <code>biglm(Ozone ~ Wind + Temp, data)</code> in the source, but because <code>tar_simple</code> is <code>TRUE</code>, it is shorthand for <code>tar_target(name = fit, command = biglm(Ozone ~ Wind + Temp, data))</code>. All other arguments to <code>tar_target()</code> are set to their default values (configurable with <code>tar_option_set()</code>).</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="chapter-3.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tar_target</span>(fit, {</span>
 <span id="cb9-2"><a href="chapter-3.html#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">biglm</span>(Ozone <span class="sc">~</span> <span class="sc">-</span><span class="dv">1</span> <span class="sc">+</span> Wind <span class="sc">+</span> Temp, data)</span>
 <span id="cb9-3"><a href="chapter-3.html#cb9-3" aria-hidden="true" tabindex="-1"></a>})</span>
 <span id="cb9-4"><a href="chapter-3.html#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Define target fit from chunk code.</span></span>
 <span id="cb9-5"><a href="chapter-3.html#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Establish _targets.R and _targets_r/targets/fit.R.</span></span></code></pre></div>
-<p>You need to be careful how you name things. You don’t want to name an
-object to the name of a targets object. So like in the code above, you
-don’t want to use <code>data</code> as a name in that code chunk since <code>data</code> is
-now a targets object.</p>
+<p>You need to be careful how you name things. You don’t want to name an object to the name of a targets object. So like in the code above, you don’t want to use <code>data</code> as a name in that code chunk since <code>data</code> is now a targets object.</p>
 </div>
 <div id="pipeline" class="section level2" number="4.6">
 <h2><span class="header-section-number">4.6</span> Pipeline</h2>
-<p>If you ran all the <code>{targets}</code> chunks in non-interactive mode, then your
-R scripts are set up to run the pipeline. <em>I don’t know what this
-means.</em></p>
+<p>If you ran all the <code>{targets}</code> chunks in non-interactive mode, then your R scripts are set up to run the pipeline. <em>I don’t know what this means.</em></p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="chapter-3.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tar_make</span>()</span>
 <span id="cb10-2"><a href="chapter-3.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [31m✓ skip target raw_data</span></span>
 <span id="cb10-3"><a href="chapter-3.html#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [39m[31m✓ skip target data</span></span>
@@ -272,14 +239,16 @@ means.</em></p>
 </div>
 <div id="output" class="section level2" number="4.7">
 <h2><span class="header-section-number">4.7</span> Output</h2>
-<p>You can retrieve results from the <code>_targets/</code> data store using
-<code>tar_read()</code> or <code>tar_load()</code>.</p>
+<p>You can retrieve results from the <code>_targets/</code> data store using <code>tar_read()</code> or <code>tar_load()</code>.</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="chapter-3.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(biglm)</span>
 <span id="cb11-2"><a href="chapter-3.html#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tar_read</span>(fit)</span>
 <span id="cb11-3"><a href="chapter-3.html#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Large data regression model: biglm(Ozone ~ -1 + Wind + Temp, data)</span></span>
 <span id="cb11-4"><a href="chapter-3.html#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Sample size =  116</span></span></code></pre></div>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="chapter-3.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tar_read</span>(hist)</span></code></pre></div>
-<p><img src="rendered-chapters/chap3_files/figure-gfm/unnamed-chunk-6-1.png" /><!-- --></p>
+<div class="figure">
+<img src="figure/unnamed-chunk-6-1.png" alt="" />
+<p class="caption">plot of chunk unnamed-chunk-6</p>
+</div>
 
 </div>
 </div>
@@ -288,7 +257,7 @@ means.</em></p>
           </div>
         </div>
       </div>
-<a href="here-is-chapter-2.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="chapter-2.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
@@ -343,6 +312,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

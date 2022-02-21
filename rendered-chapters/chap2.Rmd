@@ -1,8 +1,9 @@
+# Chapter 2
 
-# Here is chapter 2
 
-``` r
+```r
 plot(1:100)
 ```
 
-![](/Users/eli.holmes/Documents/GitHub/MARMES/rendered-chapters/chap2_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
+![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1-1.png)
+

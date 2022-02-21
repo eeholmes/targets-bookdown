@@ -1,12 +1,4 @@
----
-output:
-  github_document:
-    html_preview: false
----
-
-
-
-# Here is chapter 2
+# Chapter 2
 
 ```{r}
 plot(1:100)

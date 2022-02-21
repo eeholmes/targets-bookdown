@@ -1,8 +1,13 @@
+eq:template2-y
+eq:tempate2-x
+eq:template2-oe
+eq:template2-pe
 preface
 to-run-the-book
 to-add-chapters
-here-is-chapter-1
-here-is-chapter-2
+chapter-1
+new-section
+chapter-2
 chapter-3
 how-to-run-this.
 packages
