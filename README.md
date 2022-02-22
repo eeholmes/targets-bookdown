@@ -4,7 +4,7 @@ I originally used the approach of https://github.com/robitalec/targets-parameter
 
 **update** This doesn't work as it breaks all the figure legends from {bookdown}. It replaces images with `<img>` html tags and that loses all the info that {bookdown} needs to make legends. I tried `rmarkdown::render()` with some {bookdown} output formats but couldn't figure out a what to get both the figure legends and refs plus the equations.
 
-This might work but give html
+This gives an html fragment that can be included but lose all the heading (chapter, section) info.
 ```
 rmarkdown::render("chap2.Rmd", output_format = bookdown::html_fragment2(self_contained = FALSE))
 ```
