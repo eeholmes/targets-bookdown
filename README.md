@@ -2,6 +2,13 @@
 
 I originally used the approach of https://github.com/robitalec/targets-parameterized-bookdown but with that approach **equations will not work**. This renders the chapters to markdown and equations (unless very simple) won't work. But a fairly simple tweak will allow it to work. Basically use `knitr::knit()` instead of `rmarkdown::render()` to create the rendered R Markdown files.
 
+**update** This doesn't work as it breaks all the figure legends from {bookdown}. It replaces images with `<img>` html tags and that loses all the info that {bookdown} needs to make legends. I tried `rmarkdown::render()` with some {bookdown} output formats but couldn't figure out a what to get both the figure legends and refs plus the equations.
+
+This might work but give html
+```
+rmarkdown::render("chap2.Rmd", output_format = bookdown::html_fragment2(self_contained = FALSE))
+```
+
 This is an attempt to use {targets} with {bookdown} to track the status of chapter and not re-render chapters each time the book needs to be rebuilt. At the book level, the dependencies are super simple, just checks if the chapter Rmd has changed. But for a specific chapter, you can have a separate {targets} pipeline that might be much more complex. {targets} [projects](https://books.ropensci.org/targets/projects.html) is probably a better way to go in that situation.
 
 *Why did I do this?* I have many big bookdown projects and re-building is always a bit of torture. The bookdown caching feature is quite buggy and crashes my R session all the time. Hopefully this works better.
